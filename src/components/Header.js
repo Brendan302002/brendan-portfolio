@@ -11,18 +11,12 @@ import db from './assets/images/db-img.png';
 import './Header.css';
 
 const Header = () => {
+
+  
   const [isLoaded, setIsLoaded] = useState(false);
-
+  
   useEffect(() => {
-    // Check if the page is refreshed
-    const isPageRefreshed = performance.navigation.type === 1;
-
-    // If the page is refreshed, set isLoaded to false
-    if (isPageRefreshed) {
-      setIsLoaded(false);
-    } else {
-      setIsLoaded(true);
-    }
+    setIsLoaded(true);
   }, []);
 
   return (
