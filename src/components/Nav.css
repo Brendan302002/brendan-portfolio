@@ -1,0 +1,84 @@
+.navbar {
+    background-color: #333;
+    height: 43px;
+    width: 1450px;
+    border-radius: 0px 0px 30px 30px;
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 0px;
+    border-radius: 5px;
+}
+  
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+  
+.nav button {
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    font-size: large;
+    margin:15px
+}
+
+.nav button:hover {
+    color: rgb(94, 93, 93);
+}
+  
+
+.select-menu {
+    position: relative;
+    padding: 0px;
+
+  }
+  
+  .options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333; /* Background color matching the navbar */
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    
+    
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    font-size: large;
+    font-style: italic;
+  }
+  
+  
+  
+  
+  
+
+ 
+  
+  
