@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import prof from './assets/images/Profile-BG.jpg';
 import linkedin from './assets/images/Linked-in.png';
 import github from './assets/images/github-img.png';
@@ -11,16 +11,30 @@ import db from './assets/images/db-img.png';
 import './Header.css';
 
 const Header = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Check if the page is refreshed
+    const isPageRefreshed = performance.navigation.type === 1;
+
+    // If the page is refreshed, set isLoaded to false
+    if (isPageRefreshed) {
+      setIsLoaded(false);
+    } else {
+      setIsLoaded(true);
+    }
+  }, []);
+
   return (
-    <div className="header">
-      <img src={prof} alt="brendan" className="header-image" />
-      <div className="header-info">
-        <h1>Brendan Goddard</h1>
-        <h2>Software Developer</h2>
-        <p className="software-text">
+    <div className={`header ${isLoaded ? 'show' : ''}`}>
+      <img src={prof} alt="brendan" className={`header-image ${isLoaded ? 'show' : ''}`} />
+      <div className={`header-info ${isLoaded ? 'show' : ''}`}>
+        <h1 className={`fade-in ${isLoaded ? 'show' : ''}`}>Brendan Goddard</h1>
+        <h2 className={`fade-in ${isLoaded ? 'show' : ''}`}>Software Developer</h2>
+        <p className={`software-text fade-in ${isLoaded ? 'show' : ''}`}>
           I have a passion for designing elegant and simplistic websites, which are easy for users and make people want to return for a second look
         </p>
-        <div className="buttons">
+        <div className={`buttons fade-in ${isLoaded ? 'show' : ''}`}>
           <a href="https://github.com/Brendan302002" target="_blank">
             <img src={github} alt="GitHub" />
           </a>
