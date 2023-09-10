@@ -73,7 +73,6 @@
 
   .softwares img {
     max-width: 40px;
-    
   }
 
   @media screen and (max-width: 950px) {
@@ -95,20 +94,25 @@
         width: 200px;
 
     }
-    .softwares {
-      border-bottom: 1px solid rgb(0, 0, 0);
-    }
-
-    .softwares ul {
+    
+    .softwares  ul {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-right: 75px;
       
     }
-    
-    .softwares li {
+  
+    .softwares ul li{
+      
+      display: grid;
+      justify-content: center;
+      align-items: center;
       border-left: 0px solid black;
-    } 
+      border-bottom: 1px solid black;
+    }
+    
+    
 
     
   }
