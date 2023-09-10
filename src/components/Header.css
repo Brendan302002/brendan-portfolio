@@ -5,6 +5,7 @@
     align-items: center;
     width: 600px;
     margin: 30vh 0px;
+    overflow: hidden;
   }
   
   .header-image {
@@ -45,7 +46,7 @@
     display: flex;
     justify-content:flex-start;
     
-    margin-top: px;
+    
   }
   
   .buttons a {
@@ -83,10 +84,33 @@
 
   @media screen and (max-width: 700px) {
     .header {
-      width: 200px;
       display: flex;
-      flex:column;
+      flex-direction: column;
+      margin: 10vh 0px;
+      justify-content: center;
+      align-items: center;
     }
+
+    .header-image {
+        width: 200px;
+
+    }
+    .softwares {
+      border-bottom: 1px solid rgb(0, 0, 0);
+    }
+
+    .softwares ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .softwares li {
+      border-left: 0px solid black;
+    } 
+
+    
   }
 
 .software-icon {
