@@ -22,7 +22,7 @@
     font-size: 38px;
     margin: 0;
     border-bottom: 1px solid #333;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'SF-pro', sans-serif;
     
   }
   
@@ -30,14 +30,14 @@
   h2 {
     font-size: 18px;
     margin: 5px 0px;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'SF-pro', sans-serif;
     font-size: 24px;
     font-weight: 100;
   }
   
   .software-text {
     font-size: 20px;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'SF-pro', sans-serif;
     width: 350px;
     margin: 5px 0px;
   }

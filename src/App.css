@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Helvetica'; /* Choose a name for your font */
-  src: url('./components/assets/images/fonts/Helvetica Neue Regular.otf') format('opentype');
+  font-family: 'SF-Pro'; /* Choose a name for your font */
+  src: url('./components/assets/images/fonts/sf-pro-icons_regular.woff2') format('woff2');
   /* Adjust the URL to point to your OTF font file's location */
 }
 
@@ -8,8 +8,11 @@ body {
   margin: 0;
   padding: 0;
   
-  
   overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .Apps {
