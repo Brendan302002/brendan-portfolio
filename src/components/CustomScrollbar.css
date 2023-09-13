@@ -4,7 +4,7 @@
     top: 43px;
     width: 10px;
     height: 75%;
-    background-color: #6662624f;
+    background-color: #ffffff00;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
   .scrollbar-track {
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #ffffff00;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
