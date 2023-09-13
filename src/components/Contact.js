@@ -8,6 +8,7 @@ function Contact() {
     email: '',
     message: '',
   });
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,10 +29,16 @@ function Contact() {
     };
 
     // Send the email using Email.js
-    emailjs.send('service_ps1ujgw', 'template_irnej1b', emailData)
+    emailjs
+      .send('service_ps1ujgw', 'template_9stpk7a', emailData)
       .then((response) => {
         console.log('Email sent successfully!', response);
-        // You can add code here to display a success message or redirect to a thank you page.
+        setEmailSent(true);
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
       })
       .catch((error) => {
         console.error('Email error:', error);
@@ -72,10 +79,12 @@ function Contact() {
           onChange={handleChange}
         ></textarea>
         <button type="submit">Submit</button>
+        {emailSent && <p>Email sent!</p>}
       </form>
     </div>
   );
 }
 
 export default Contact;
+
 
