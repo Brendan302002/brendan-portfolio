@@ -30,7 +30,7 @@ function Contact() {
 
     // Send the email using Email.js
     emailjs
-      .send('service_ps1ujgw', 'template_9stpk7a', emailData)
+      .send('service_ps1ujgw', 'template_irnej1b', emailData)
       .then((response) => {
         console.log('Email sent successfully!', response);
         setEmailSent(true);
