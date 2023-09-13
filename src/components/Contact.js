@@ -18,7 +18,7 @@ function Contact() {
     e.preventDefault();
 
     // Configure Email.js with your service ID, template ID, and user ID
-    emailjs.init('YOUR_USER_ID');
+    emailjs.init('KXrb4l7y54PuJT_3N');
 
     const emailData = {
       to_email: 'bjgoddard21@gmail.com', // The recipient email address
@@ -28,7 +28,7 @@ function Contact() {
     };
 
     // Send the email using Email.js
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', emailData)
+    emailjs.send('service_ps1ujgw', 'template_irnej1b', emailData)
       .then((response) => {
         console.log('Email sent successfully!', response);
         // You can add code here to display a success message or redirect to a thank you page.
