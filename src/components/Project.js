@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import './Project.css'; // Create this CSS file for styling
 import logo from './assets/images/BG-Logo.jpg';
+//import live from './assets/images/Live.jpg';
+import git from './assets/images/github-img.png';
 
 const projectsData = [
   {
-    title: 'Project 1',
-    description: 'This is the description for Project 1.',
-    imageUrl: logo, // Relative URL to the image
+    title: 'Unity Golf',
+    description: 'This game was created in Unity, using C#, and 3D sprites to make a golf game, then deployed to webGL',
+    imageUrl: logo,
   },
   {
-    title: 'Project 2',
-    description: 'This is the description for Project 2.',
-    // Add more project objects here
+    title: 'SQL - LINQ Project',
+    description: 'This project demonstrates the basics of the Linq to entities framework. It runs a C# test application, which runs a linq query to an SQL server object, giving results to the user',
+    imageUrl: logo,
   },
 ];
 
@@ -29,7 +31,10 @@ function Projects() {
   };
 
   return (
+    
     <div className="projects-container">
+      <>
+      
       <button className="prev-button" onClick={handlePrev}>
         &lt; Prev
       </button>
@@ -43,13 +48,26 @@ function Projects() {
             <img src={project.imageUrl} alt={project.title} />
           )}
           <p>{project.description}</p>
-          {/* Add more content for each project */}
+          <div className='button'>
+              <a href="https://github.com/Brendan302002" target="_blank">
+              <img src={git} alt="GitHub" />
+              <p>Source Code</p>
+              </a>
+              <a href="https://www.linkedin.com/in/brendan-goddard/" target="_blank">
+                <img src={git} alt="LinkedIn" />
+                <p>Live Demo</p>
+              </a>
+          </div>
         </div>
       ))}
-      <button className="next-button" onClick={handleNext}>
-        Next &gt;
-      </button>
+      
+   
+      </>
     </div>
+
+    
+    
+    
   );
 }
 

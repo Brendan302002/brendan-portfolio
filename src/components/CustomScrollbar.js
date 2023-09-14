@@ -29,7 +29,7 @@ function CustomScrollbar() {
           style={{ transform: `translateY(${(scrollY / document.body.scrollHeight) * 100}%)` }}
         ></div>
       </div>
-      <button onClick={handleScrollToTop}><img src={arrow}></img></button>
+      {/* <button onClick={handleScrollToTop}><img src={arrow}></img></button> */}
     </div>
   );
 }
