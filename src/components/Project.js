@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Project.css'; // Create this CSS file for styling
 import logo from './assets/images/BG-Logo.jpg';
-//import live from './assets/images/Live.jpg';
 import git from './assets/images/github-img.png';
 
 const projectsData = [
@@ -31,43 +30,44 @@ function Projects() {
   };
 
   return (
-    
     <div className="projects-container">
-      <>
-      
       <button className="prev-button" onClick={handlePrev}>
         &lt; Prev
       </button>
-      {projectsData.map((project, index) => (
-        <div
-          className={`project-box ${currentIndex === index ? 'active' : ''}`}
-          key={index}
-        >
-          <h2>{project.title}</h2>
-          {project.imageUrl && (
-            <img src={project.imageUrl} alt={project.title} />
-          )}
-          <p>{project.description}</p>
-          <div className='button'>
-              <a href="https://github.com/Brendan302002" target="_blank">
-              <img src={git} alt="GitHub" />
-              <p>Source Code</p>
-              </a>
-              <a href="https://www.linkedin.com/in/brendan-goddard/" target="_blank">
-                <img src={git} alt="LinkedIn" />
-                <p>Live Demo</p>
-              </a>
-          </div>
+      <div
+        className="project-box"
+      > 
+        <h1>{projectsData[currentIndex].title}</h1>
+        {projectsData[currentIndex].imageUrl && (
+          <img src={projectsData[currentIndex].imageUrl} alt={projectsData[currentIndex].title} />
+        )}
+        <p>{projectsData[currentIndex].description}</p>
+        <div className='button'>
+          <a href="https://github.com/Brendan302002" target="_blank">
+            <img src={git} alt="GitHub" />
+            <p>Source Code</p>
+          </a>
+          <a href="https://www.linkedin.com/in/brendan-goddard/" target="_blank">
+            <img src={git} alt="LinkedIn" />
+            <p>Live Demo</p>
+          </a>
         </div>
-      ))}
-      
-   
-      </>
-    </div>
 
-    
-    
-    
+        <div className="project-bullets">
+        {projectsData.map((_, index) => (
+          <span
+            key={index}
+            className={`bullet ${currentIndex === index ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(index)}
+          ></span>
+        ))}
+      </div>
+      </div>
+      
+      <button className="next-button" onClick={handleNext}>
+        Next &gt;
+      </button>
+    </div>
   );
 }
 
