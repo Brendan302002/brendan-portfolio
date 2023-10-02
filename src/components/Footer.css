@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -21,12 +21,15 @@
   .footer-stack p {
     margin: 0;
     font-size: 20px;
-    font-family: 'SF-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+
   }
   
   .footer-links {
     flex: 2;
     text-align: center;
+    padding-left: 150px;
   }
   
   .footer-links a {
@@ -34,13 +37,20 @@
     text-decoration: none;
     margin: 0 20px;
     font-size: 20px;
-    font-family: 'SF-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
   }
   
   .footer-links a:hover {
-    text-transform: lowercase;
+    color: #fffafa;
+    transform: translateY(-5px); 
+
   }
   
   .copyright {
     margin-top: 20px;
+    margin-right: 100px;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+
   }

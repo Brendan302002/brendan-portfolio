@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import prof from './assets/images/Profile-BG.jpg';
+import prof from './assets/images/profile/IMG_3557.jpeg';
 import linkedin from './assets/images/Linked-in.png';
 import github from './assets/images/github-img.png';
 import js from './assets/images/JS-img.png';

@@ -1,20 +1,19 @@
 .navbar {
-    background-color: #333;
-    height: 43px;
-    width: 1450px;
+    background-color: #111111;
+    height: 50px;
+    width: 2000px;
     border-radius: 0px 0px 30px 30px;
-    color: white;
     display: flex;
     justify-content:center;
     align-items: center;
 }
 
-.logo {
+/* .logo {
     width: 70px;
     margin-top: 15px;
     margin-left: 0px;
     border-radius: 5px;
-}
+} */
   
 .nav {
     display: flex;
@@ -28,14 +27,23 @@
     border: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    font-family: 'SF-Pro ', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: large;
-    margin:15px
+    margin:15px;
+    padding: 5px;
 }
 
 .nav button:hover {
-    color: rgb(94, 93, 93);
+    background-color: rgb(0, 0, 0);
+    transform: translateY(5px); 
+
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 4.0s ease, transform 4.0s ease;
+  }
   
 
 .select-menu {

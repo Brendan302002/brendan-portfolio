@@ -15,11 +15,12 @@ function Nav() {
     setIsDropdownOpen(false);
   };
 
+  
   return (
     <div className="App">
       <header className="navbar">
         <div className="logo">
-          <img src={logo} alt="logo" className="logo" />
+          {/* <img src={logo} alt="logo" className="logo" /> */}
         </div>
         <nav className="nav">
           <button href="#About">About</button>
