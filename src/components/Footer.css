@@ -4,6 +4,7 @@
     padding: 20px 0;
     text-align: center;
     width: 100%;
+    font-family: 'SF-pro', sans-serif;
   }
   
   .footer-content {
@@ -18,12 +19,24 @@
     text-align: center;
   }
   
-  .footer-stack p {
+  .footer-stack h1 {
     margin: 0;
     font-size: 20px;
+<<<<<<< HEAD
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
 
+=======
+    font-family: 'SF-pro', sans-serif;
+    font-weight: 700;
+  }
+
+  .footer-stack h2 {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'SF-pro', sans-serif;
+    font-weight: 700;
+>>>>>>> 2cec2040abba3e59985411d2fd0c909e98cf7367
   }
   
   .footer-links {
@@ -32,25 +45,42 @@
     padding-left: 150px;
   }
   
-  .footer-links a {
+  .footer-links h1 {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0;
     font-size: 20px;
+<<<<<<< HEAD
     font-family: 'Open Sans', sans-serif;
 
+=======
+    font-family: 'SF-pro', sans-serif;
+    font-weight: 700;
+    
+>>>>>>> 2cec2040abba3e59985411d2fd0c909e98cf7367
   }
+
+  
   
   .footer-links a:hover {
+<<<<<<< HEAD
     color: #fffafa;
     transform: translateY(-5px); 
 
+=======
+    color: gray;
+>>>>>>> 2cec2040abba3e59985411d2fd0c909e98cf7367
   }
   
   .copyright {
     margin-top: 20px;
+<<<<<<< HEAD
     margin-right: 100px;
     font-style: italic;
     font-family: 'Open Sans', sans-serif;
 
+=======
+    color: black;
+    font-style: italic;
+>>>>>>> 2cec2040abba3e59985411d2fd0c909e98cf7367
   }

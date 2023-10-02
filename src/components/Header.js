@@ -26,7 +26,7 @@ const Header = () => {
         <h1 className={`fade-in ${isLoaded ? 'show' : ''}`}>Brendan Goddard</h1>
         <h2 className={`fade-in ${isLoaded ? 'show' : ''}`}>Software Developer</h2>
         <p className={`software-text fade-in ${isLoaded ? 'show' : ''}`}>
-          I have a passion for designing elegant and simplistic websites, which are easy for users and make people want to return for a second look
+        Passionate about crafting elegant and minimalistic websites, my focus lies in user-friendliness, creating sustainable solutions, designing repeatable components, and writing reusable and adaptable code that ensures a seamless online experience and encourages return visits.
         </p>
         <div className={`buttons fade-in ${isLoaded ? 'show' : ''}`}>
           <a href="https://github.com/Brendan302002" target="_blank">

@@ -6,13 +6,13 @@ function Footer() {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-stack">
-          <p>Brendan Goddard</p>
-          <p>Software Developer</p>
+          <h1>Brendan Goddard</h1>
+          <h2>Software Developer</h2>
         </div>
         <div className="footer-links">
-          <a href="/">About</a>
-          <a href="/">Projects</a>
-          <a href="/contact">Contact</a>
+          <a href="/"><h1>About</h1></a>
+          <a href="/"><h1>Projects</h1></a>
+          <a href="/contact"><h1>Contact</h1></a>
         </div>
       </div>
       <div className="copyright">

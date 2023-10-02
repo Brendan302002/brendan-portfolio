@@ -48,8 +48,8 @@ function Contact() {
 
   return (
     <div className="contact-container">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out!</p>
+      <h1>Contact Me</h1>
+      
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
