@@ -10,9 +10,9 @@ function Footer() {
           <h2>Software Developer</h2>
         </div>
         <div className="footer-links">
-          <a href="/"><h1>About</h1></a>
-          <a href="/"><h1>Projects</h1></a>
-          <a href="/contact"><h1>Contact</h1></a>
+          <a href="/">About</a>
+          <a href="/">Projects</a>
+          <a href="/contact">Contact</a>
         </div>
       </div>
       <div className="copyright">

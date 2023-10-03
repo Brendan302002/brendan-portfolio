@@ -24,22 +24,26 @@
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
-
+    border: none;
     font-family: 'SF-pro', sans-serif;
     font-weight: 700;
   }
 
   .footer-stack h2 {
     margin: 0;
+    border: none;
     font-size: 20px;
     font-family: 'SF-pro', sans-serif;
     font-weight: 700;
+    font-style: italic;
   }
   
   .footer-links {
     flex: 2;
     text-align: center;
-    padding-left: 150px;
+    padding-left: 0px;
+    border: none;
+    text-decoration: none;
   }
   
   .footer-links h1 {
@@ -49,30 +53,37 @@
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
 
-
+    font-style: italic;
     font-family: 'SF-pro', sans-serif;
     font-weight: 700;
     
   }
 
-  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+    font-size: 20px;
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+
+    font-style: italic;
+    font-family: 'SF-pro', sans-serif;
+    font-weight: 700;
+    
+  }
   
   .footer-links a:hover {
-
-    color: #fffafa;
-    transform: translateY(-5px); 
-
-
+    transform: translateY(-10px); 
     color: gray;
   }
   
   .copyright {
     margin-top: 20px;
-    margin-right: 100px;
+    
     font-style: italic;
     font-family: 'Open Sans', sans-serif;
-
-    color: black;
+    color: rgb(255, 255, 255);
     font-style: italic;
 
   }

@@ -11,6 +11,7 @@ body {
   padding: 0;
   
   overflow-x: hidden;
+  
 }
 
 body::-webkit-scrollbar {
@@ -25,7 +26,8 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   width: 100%; 
-
+  scroll-snap-type: y mandatory; /* Enables vertical scroll snapping */
+  
 }
 
 @media screen and (max-width: 950px) {
