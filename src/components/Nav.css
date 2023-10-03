@@ -29,13 +29,11 @@
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: large;
-<<<<<<< HEAD
     margin:15px;
     padding: 5px;
-=======
+
 
     margin:15px
->>>>>>> 2cec2040abba3e59985411d2fd0c909e98cf7367
 }
 
 .nav button:hover {

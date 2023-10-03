@@ -51,10 +51,9 @@
     resize: vertical;
   }
   
-  /* button[type="submit"] {
+  button[type="submit"] {
 
     background-color: #f2f8ff;
-=======
     background-color: #000000;
     color: #fff;
     border: none;
@@ -65,7 +64,7 @@
     font-family: 'SF-Pro ', sans-serif;
     transition: background-color 0.3s ease;
     font-weight: 700;
-  } */
+  } 
   
   button[type="submit"]:hover {
     background-color: #595a5a;
