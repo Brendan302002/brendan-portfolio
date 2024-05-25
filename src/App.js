@@ -12,16 +12,16 @@ function App() {
 
 
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 100, delay: 20 });
+  // useScrollSnap({ ref: scrollRef, duration: 100, delay: 20 });
   return (
 
     
     <div className='Apps' ref={scrollRef}>
       <><Nav />
       <Header />
-      <Projects/>
-      <Footer/>
-      <CustomScrollbar />
+      {/* <Projects/> */}
+      {/* <Footer/> */}
+      {/* <CustomScrollbar /> */}
       
     </>
 

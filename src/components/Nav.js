@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Nav.css';
 import logo from './assets/images/BG-Logo.jpg';
+import home from './assets/images/home-nav.png';
 
 function Nav() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -19,35 +20,17 @@ function Nav() {
   return (
     <div className="App">
       <header className="navbar">
-        <div className="logo">
-          {/* <img src={logo} alt="logo" className="logo" /> */}
-        </div>
+        {/* <div className="logo">
+        <button className='home' href="#home"><img src={home}></img></button>
+        </div> */}
         <nav className="nav">
           <button href="#About">About</button>
-          <div className="select-menu" onClick={handleDropdownClick}>
-            <button className="select-btn">
-              <span className="sBtn-text">{selectedOption}</span>
-              <i className={`bx ${isDropdownOpen ? 'bx-chevron-up' : 'bx-chevron-down'}`}></i>
-            </button>
-            {isDropdownOpen && (
-              <ul className="options">
-                <li className="option" onClick={() => handleOptionClick('Project 1')}>
-                  <i className="bx bxl-project1-alt" style={{ color: '#E1306C' }}></i>
-                  <span className="option-text">Project 1</span>
-                </li>
-                <li className="option" onClick={() => handleOptionClick('Project 2')}>
-                  <i className="bx bxl-project2-square" style={{ color: '#0E76A8' }}></i>
-                  <span className="option-text">Project 2</span>
-                </li>
-                <li className="option" onClick={() => handleOptionClick('Project 3')}>
-                  <i className="bx bxl-project3-circle" style={{ color: '#4267B2' }}></i>
-                  <span className="option-text">Project 3</span>
-                </li>
-              </ul>
-            )}
-          </div>
+          <button href="#Projects">Projects</button>
+          <button href="#Resume">Resume</button>
           <button href="#Contact">Contact</button>
+
         </nav>
+
       </header>
     </div>
   );
