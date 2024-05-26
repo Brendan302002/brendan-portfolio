@@ -32,7 +32,7 @@ const Header = () => {
         <h1 className={`fade-in ${isLoaded ? 'show' : ''}`}>Brendan Goddard</h1>
         <h2 className={`fade-in ${isLoaded ? 'show' : ''}`}>Software Developer</h2>
         <p className={`software-text fade-in ${isLoaded ? 'show' : ''}`}>
-          A fast-learning software developer with extensive expertise across various areas of the field, my focus encompasses user-friendliness, sustainable solutions, designing repeatable components, and writing reusable, adaptable code that ensures a seamless online experience and encourages return visits.
+          As a fast-learning software developer with extensive expertise across various areas of the field, my focus encompasses user-friendliness, sustainable solutions, designing repeatable components, and writing reusable, adaptable code that ensures a seamless online experience and encourages return visits.
         </p>
         <div className={`buttons fade-in ${isLoaded ? 'show' : ''}`}>
           <a href="https://github.com/Brendan302002" target="_blank">
