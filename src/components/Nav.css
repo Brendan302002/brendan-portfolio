@@ -1,86 +1,64 @@
-.navbar {
-  background-color: #111111;
-  height: 50px;
-  width: 100vh; /* Use 100% width for responsiveness */
-  border-radius: 0px 0px 30px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Needed for absolute positioning of the logo */
-}
-
-.logo {
-  width: 40px;
-  position: absolute; 
-  top: 0px; 
-  left: 20px; 
-  margin: 0; 
-  padding: 0; 
-}
-
 .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1; /* Allow nav to grow and take up remaining space */
-}
-
-.nav button {
-  background-color: transparent;
-  border: none;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
-  font-size: large;
-  margin: 15px;
-  padding: 5px;
-}
-
-.nav button:hover {
-  background-color: rgb(0, 0, 0);
-  transform: translateY(5px); 
-}
-
-.home {
-  background-color: #111111;
-  margin: 10px;
-}
-
-.home img {
-width: 30px;
-height: 30px;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: opacity 4.0s ease, transform 4.0s ease;
-}
-
-.select-menu {
-  position: relative;
-  padding: 0px;
-}
-
-.options {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
-  background-color: #333;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
+  padding: 50px;
+  padding-left: 100px;
 }
 
-.option {
+.nav ul {
   display: flex;
-  align-items: center;
-  /* padding:  */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin-left: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  position: relative;
+}
+
+.nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+.nav ul li a:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-top: -50px;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav ul li {
+    margin: 0px 10px;
+  }
 }

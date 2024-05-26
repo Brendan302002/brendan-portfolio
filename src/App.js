@@ -17,7 +17,8 @@ function App() {
 
     
     <div className='Apps' ref={scrollRef}>
-      <><Nav />
+      <>
+      {/* <Nav /> */}
       <Header />
       {/* <Projects/> */}
       {/* <Footer/> */}

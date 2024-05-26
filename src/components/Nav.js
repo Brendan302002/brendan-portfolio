@@ -24,12 +24,13 @@ function Nav() {
         <button className='home' href="#home"><img src={home}></img></button>
         </div> */}
         <nav className="nav">
-          <button href="#About">About</button>
-          <button href="#Projects">Projects</button>
-          <button href="#Resume">Resume</button>
-          <button href="#Contact">Contact</button>
-
-        </nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
       </header>
     </div>

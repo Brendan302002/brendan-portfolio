@@ -150,3 +150,29 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Initial hidden state */
+.header,
+.header-image,
+.header-info,
+.header-info h1,
+.header-info h2,
+.header-info p,
+.header-info .buttons,
+.softwares {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Visible state */
+.header.show,
+.header-image.show,
+.header-info.show,
+.header-info h1.show,
+.header-info h2.show,
+.header-info p.show,
+.header-info .buttons.show,
+.softwares.show{
+  opacity: 1;
+}
+
