@@ -1,36 +1,96 @@
-@font-face {
-  font-family: 'SF-Pro'; /* Choose a name for your font */
-  src: url('./components/assets/images/fonts/sf-pro-icons_regular.woff2') format('woff2');
-  /* Adjust the URL to point to your OTF font file's location */
+.App {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-image: linear-gradient(
+  285deg,
+  hsl(0deg 7% 11%) 0%,
+  hsl(0deg 3% 27%) 0%,
+  hsl(0deg 1% 44%) 1%,
+  hsl(0deg 1% 64%) 2%,
+  hsl(0deg 1% 84%) 4%,
+  hsl(205deg 10% 95%) 7%,
+  hsl(205deg 10% 77%) 11%,
+  hsl(204deg 10% 60%) 19%,
+  hsl(204deg 13% 43%) 30%,
+  hsl(202deg 27% 28%) 42%,
+  hsl(203deg 38% 19%) 52%,
+  hsl(206deg 30% 18%) 60%,
+  hsl(210deg 23% 16%) 67%,
+  hsl(214deg 15% 14%) 74%,
+  hsl(219deg 8% 11%) 79%,
+  hsl(238deg 4% 11%) 84%,
+  hsl(274deg 3% 10%) 88%,
+  hsl(318deg 3% 10%) 93%,
+  hsl(342deg 3% 10%) 96%,
+  hsl(0deg 2% 9%) 100%
+
+);
+
+
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-body {
-  margin: 0;
-  padding: 0;
-  
-  overflow-x: hidden;
-  
-}
 
-body::-webkit-scrollbar {
-  display: none;
-}
-.background img{
-  width: 100vh;
-}
-.Apps {
+.navbar {
+  width: 200px;
+  /* background-color: #1D1919; */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 25px 0; /* Increased margin to increase distance between options */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif; 
+  font-weight: 100;   
+  font-size: 20px; /* Adjusted size as per previous request */
+  display: block;
+  position: relative; /* Required for the ::before pseudo-element */
+  text-align: center;
+  transition: transform 0.05s ease-in-out, margin-left 0.05s ease-in-out; /* Synchronize with the strike-through */
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 40%; /* Lower the strike-through point slightly */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.4s ease-in-out; /* Synchronize with the translation */
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.navbar a:hover {
+  transform: translateX(7.5px);
+}
+
+.navbar a.active {
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; 
-  scroll-snap-type: y mandatory; /* Enables vertical scroll snapping */
-  
 }
-
-@media screen and (max-width: 950px) {
-  
-}
-
