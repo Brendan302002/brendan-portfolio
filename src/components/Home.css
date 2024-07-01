@@ -1,3 +1,4 @@
+/* Base styles */
 .home {
   position: relative;
   text-align: center;
@@ -8,8 +9,6 @@
   width: 100%;
   height: 100%;
   padding-right: 200px;
-  /* background-color: aqua; */
-
   font-family: 'Open Sans', sans-serif; 
   font-weight: 100;
 }
@@ -39,20 +38,20 @@
 }
 
 .top-right-links img {
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-  transition: transform 0.5s ease-in-out; /* Slower transition */
+  width: 50px;
+  height: 50px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .top-right-links img:hover {
-  animation: shake 0.7s ease-in-out; /* Slower shake animation */
+  animation: shake 0.7s ease-in-out;
   animation-iteration-count: 1;
 }
 
 @keyframes shake {
   0%, 100% { transform: translate(0, 0); }
-  10%, 30%, 50%, 70%, 90% { transform: translate(-2px, -1px); } /* Less intense shake */
-  20%, 40%, 60%, 80% { transform: translate(2px, 1px); } /* Less intense shake */
+  10%, 30%, 50%, 70%, 90% { transform: translate(-2px, -1px); }
+  20%, 40%, 60%, 80% { transform: translate(2px, 1px); }
 }
 
 .welcome-text {
@@ -61,14 +60,11 @@
   max-width: 600px;
   margin: auto;
   padding: 20px;
-  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 10px;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif; 
   font-weight: 200;
 }
-
-
 
 .profile-picture {
   width: 50%;
@@ -81,21 +77,21 @@
 }
 
 .game-screenshot1 {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
+  width: 100px;
+  height: 100px;
   position: absolute;
-  top: -10px; /* Adjust position as needed */
-  right: -20px; /* Adjust position as needed */
+  top: -10px;
+  right: -20px;
   opacity: 0.8;
   z-index: 1;
 }
 
 .game-screenshot2 {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: -10px; /* Adjust position as needed */
-  left: -20px; /* Adjust position as needed */
+  bottom: -10px;
+  left: -20px;
   opacity: 0.8;
   z-index: 1;
 }
@@ -103,8 +99,8 @@
 .flip-wheel {
   display: inline-block;
   animation: flip-animation 2s infinite;
-  width: 150px; /* Fixed width to prevent text shifting */
-  text-align: left; /* Align text to the left */
+  width: 150px;
+  text-align: left;
 }
 
 @keyframes flip-animation {
@@ -112,4 +108,45 @@
   45% { transform: translateY(-100%); opacity: 0; }
   55% { transform: translateY(100%); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive styles for screens 800px or smaller */
+@media (max-width: 800px) {
+  .home {
+    flex-direction: column;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .welcome-text {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .profile-picture {
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .game-screenshot1, .game-screenshot2 {
+    width: 80px;
+    height: 80px;
+    position: static;
+    margin: 5px auto;
+    display: block;
+  }
+
+  .top-right-links {
+    top: 5px;
+    right: 5px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .top-right-links img {
+    width: 40px;
+    height: 40px;
+  }
 }

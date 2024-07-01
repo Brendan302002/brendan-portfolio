@@ -1,96 +1,197 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
 .App {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh;
-  background-image: linear-gradient(
-  285deg,
-  hsl(0deg 7% 11%) 0%,
-  hsl(0deg 3% 27%) 0%,
-  hsl(0deg 1% 44%) 1%,
-  hsl(0deg 1% 64%) 2%,
-  hsl(0deg 1% 84%) 4%,
-  hsl(205deg 10% 95%) 7%,
-  hsl(205deg 10% 77%) 11%,
-  hsl(204deg 10% 60%) 19%,
-  hsl(204deg 13% 43%) 30%,
-  hsl(202deg 27% 28%) 42%,
-  hsl(203deg 38% 19%) 52%,
-  hsl(206deg 30% 18%) 60%,
-  hsl(210deg 23% 16%) 67%,
-  hsl(214deg 15% 14%) 74%,
-  hsl(219deg 8% 11%) 79%,
-  hsl(238deg 4% 11%) 84%,
-  hsl(274deg 3% 10%) 88%,
-  hsl(318deg 3% 10%) 93%,
-  hsl(342deg 3% 10%) 96%,
-  hsl(0deg 2% 9%) 100%
-
-);
-
-
-
+  background-color: #121212; /* Ensure consistent background when scrolling */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  z-index: 2; /* Ensure it stays on top */
+  background-color: #121212; /* Ensure consistent background when scrolling */
+}
 
+.header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 
-.navbar {
-  width: 200px;
-  /* background-color: #1D1919; */
+.header .info {
+  margin-left: 10px;
+}
+
+.header .info .name {
+  font-size: 18px;
+}
+
+.header .info .role {
+  font-size: 14px;
+  color: gray;
+}
+
+.bubble-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  z-index: 2; /* Ensure it stays on top */
+  background-color: #121212; /* Ensure consistent background when scrolling */
+}
+
+.bubble-buttons button {
+  background-color: #121212; /* Ensure consistent background when scrolling */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+.recent-posts {
+  padding: 10px;
+  z-index: 2; /* Ensure it stays on top */
+  background-color: #121212; /* Ensure consistent background when scrolling */
+}
+
+.recent-posts h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.posts-wrapper {
+  position: relative;
+  flex: 1;
+  overflow-y: scroll;
+  padding-bottom: 60px; /* Space for the navbar */
+}
+
+.posts {
   display: flex;
   flex-direction: column;
+  padding-bottom: 60px; /* Space for the current project */
+}
+
+.post {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: #121212; /* Ensure consistent background when scrolling */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  width: calc(100% - 40px);
+  overflow: hidden;
+  margin: 5px 20px;
 }
 
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
+.post img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
-.navbar li {
-  margin: 25px 0; /* Increased margin to increase distance between options */
+.post .details {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif; 
-  font-weight: 100;   
-  font-size: 20px; /* Adjusted size as per previous request */
-  display: block;
-  position: relative; /* Required for the ::before pseudo-element */
-  text-align: center;
-  transition: transform 0.05s ease-in-out, margin-left 0.05s ease-in-out; /* Synchronize with the strike-through */
-}
-
-.navbar a::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 40%; /* Lower the strike-through point slightly */
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.4s ease-in-out; /* Synchronize with the translation */
-}
-
-.navbar a:hover::before {
-  width: 100%;
-}
-
-.navbar a:hover {
-  transform: translateX(7.5px);
-}
-
-.navbar a.active {
+.post .title {
+  font-size: 16px;
   font-weight: bold;
 }
 
-.main-content {
-  flex: 1;
-  padding: 20px;
+.post .language {
   display: flex;
-  justify-content: center;
   align-items: center;
+  font-size: 14px;
+  color: gray;
+}
+
+.post .language img {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+.current-project {
+  position: fixed;
+  bottom: 60px; /* Adjust this value to position above the navbar */
+  left: 10px;
+  right: 10px;
+  background-color: #282828;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.current-project img {
+  width: 15px;
+  border-radius: 10px;
+}
+
+.current-project .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.current-project .progress-bar {
+  margin-top: 10px;
+}
+
+.progress {
+  width: 100%;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.progress .progress-bar-fill {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #1db954;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #121212;
+  padding: 10px 0;
+  z-index: 2; /* Ensure it stays on top */
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar button img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
