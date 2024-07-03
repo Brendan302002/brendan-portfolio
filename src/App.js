@@ -24,14 +24,12 @@ const App = () => {
 
   useEffect(() => {
     const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-      setLightMode(currentTheme === 'dark');
-    }
+    setLightMode(currentTheme === 'light'); // Set initial theme based on local storage
   }, []);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', lightMode ? 'dark' : 'light');
-    localStorage.setItem('theme', lightMode ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', lightMode ? 'light' : 'dark');
+    localStorage.setItem('theme', lightMode ? 'light' : 'dark');
   }, [lightMode]);
 
   const posts = [
@@ -55,9 +53,9 @@ const App = () => {
     .concat(posts.filter(post => post.type !== sortOrder));
 
   return (
-    <div className={`App ${lightMode ? 'light-mode' : ''}`}>
+    <div className={`App ${lightMode ? 'light-mode' : 'dark-mode'}`}>
       <div className='topRow'>
-        <div className="timer">{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+        <div className="timer">{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12:false})}</div>
         <div className="switch">
           <label className="theme-switch" htmlFor="checkbox">
             <input

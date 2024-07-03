@@ -85,7 +85,7 @@ body {
 
 .timer {
   margin-left: 20px;
-  color: gray;
+  color: var(--timer-color);
   float: left;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -93,10 +93,18 @@ body {
   font-style: normal;
 }
 
+[data-theme="dark"] .timer {
+  color: #fff; /* White color for timer in dark mode */
+}
+
+[data-theme="light"] .timer {
+  color: #000; /* Black color for timer in light mode */
+}
+
 .switch {
   height: 34px;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .theme-switch {
@@ -295,7 +303,7 @@ input:checked + .slider:before {
 
 .current-project {
   position: fixed;
-  bottom: 60px;
+  bottom: 85px;
   left: 10px;
   right: 10px;
   background-color: #282828;
@@ -367,6 +375,7 @@ input:checked + .slider:before {
   background-color: var(--bg-color);
   padding: 10px 0;
   z-index: 2;
+  border-top: 1px solid gray;
 }
 
 .navbar button {
