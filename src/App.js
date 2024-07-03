@@ -15,9 +15,21 @@ const App = () => {
   const [sortOrder, setSortOrder] = useState('projects');
 
   useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
+    const timer = setInterval(() => setTime(new Date()), 60000);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+      setLightMode(currentTheme === 'dark');
+    }
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', lightMode ? 'dark' : 'light');
+    localStorage.setItem('theme', lightMode ? 'dark' : 'light');
+  }, [lightMode]);
 
   const posts = [
     { title: 'First Playlist', type: 'project', language: 'JavaScript', image: 'https://via.placeholder.com/100', pin: pin2, github: '#' },
@@ -41,6 +53,20 @@ const App = () => {
 
   return (
     <div className={`App ${lightMode ? 'light-mode' : ''}`}>
+      <div className='topRow'>
+        <div className="timer">{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+        <div className="switch">
+          <label className="theme-switch" htmlFor="checkbox">
+            <input
+              type="checkbox"
+              id="checkbox"
+              checked={lightMode}
+              onChange={() => setLightMode(!lightMode)}
+            />
+            <div className="slider round"></div>
+          </label>
+        </div>
+      </div>
       <div className="header">
         <div className="left">
           <img src={profile} alt="Profile" />
@@ -50,10 +76,6 @@ const App = () => {
           </div>
         </div>
         <div className="right">
-          <div className="timer">{time.toLocaleTimeString()}</div>
-          <button className="toggle-button" onClick={() => setLightMode(!lightMode)}>
-            {lightMode ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-          </button>
           <div className="linkedin-github-links">
             <a href="https://www.linkedin.com/"><img src={linkedin} alt="LinkedIn" /></a>
             <a href="https://github.com/"><img src={github} alt="GitHub" /></a>
