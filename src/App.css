@@ -356,7 +356,8 @@ input:checked + .slider:before {
 
 .current-project .progress-bar {
   margin-top: 10px;
-  width: 100%;
+  width: 100%; /* Set initial width to 50% */
+  max-width: 100%; /* Ensure it doesn't exceed 100% of its container */
 }
 
 .progress {
