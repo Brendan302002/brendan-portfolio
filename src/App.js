@@ -117,17 +117,20 @@ const App = () => {
       </div>
 
       <div className="current-project">
-        <img src={currentProject.image} alt={currentProject.title} />
         <div className="details">
+          <img src={currentProject.image} alt={currentProject.title} />
           <div className="title">{currentProject.title}</div>
           <div className="language">{currentProject.language}</div>
-          <div className="progress">
+        </div>
+        <div className="details-progress">
             <div className="progress-bar">
+            <div className="progress">
               <div
                 className="progress-bar-fill"
                 style={{ width: `${currentProject.progress}%` }}
               ></div>
             </div>
+          
           </div>
         </div>
       </div>

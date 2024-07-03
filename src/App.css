@@ -38,7 +38,6 @@ body {
   padding: 10px;
   z-index: 2;
   background-color: var(--bg-color);
-
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -131,7 +130,6 @@ body {
   right: 0;
   top: 0;
   transition: .4s;
-  
 }
 
 .slider:before {
@@ -227,7 +225,7 @@ input:checked + .slider:before {
 .posts-wrapper {
   position: relative;
   flex: 1;
-  overflow-y: scroll;
+  overflow-y: hidden; /* Remove scrollbar */
   padding-bottom: 60px;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -253,7 +251,7 @@ input:checked + .slider:before {
   padding: 10px;
   margin-bottom: 10px;
   height: 100px;
-  width: calc(100% - 40px);
+  width: 100%;
   overflow: hidden;
   margin: 5px 20px;
   font-family: "Montserrat", sans-serif;
@@ -311,19 +309,25 @@ input:checked + .slider:before {
   padding: 10px;
   z-index: 1;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
 }
 
 .current-project img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 10px;
   margin-right: 10px;
 }
 
 .current-project .details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -333,7 +337,8 @@ input:checked + .slider:before {
 .current-project .title {
   font-size: 16px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-right: 10px;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -342,11 +347,16 @@ input:checked + .slider:before {
 
 .current-project .language {
   font-size: 12px;
+  margin-top: 10px;
   color: gray;
+}
+.current-project .details-progress {
+  width: 50vh;
 }
 
 .current-project .progress-bar {
   margin-top: 10px;
+  width: 100%;
 }
 
 .progress {
@@ -369,83 +379,56 @@ input:checked + .slider:before {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
-  height: 55px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: var(--bg-color);
-  padding: 10px 0;
-  z-index: 2;
-  border-top: 1px solid gray;
-}
-
-.navbar button {
-  background: none;
-  border: none;
-  color: rgb(187, 179, 179);
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  font-size: 12px;
+  background-color: #282828;
+  height: 60px;
+  z-index: 2;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
+.navbar button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  color: #b3b3b3;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #282828;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .navbar button img {
-  width: 22px;
-  height: 22px;
-  margin-bottom: 5px;
-  color: rgb(187, 179, 179);
+  width: 24px;
+  height: 24px;
+  margin-bottom: 3px;
 }
 
-::-webkit-scrollbar {
-  display: none;
+.light-mode {
+  --bg-color: #fefefe;
+  --font-color: #0f0f0f;
+  --timer-color: #0f0f0f;
 }
 
-/* Styles for screens wider than 800px */
-@media (min-width: 800px) {
-  .App {
-    flex-direction: row;
-  }
+.dark-mode {
+  --bg-color: #121212;
+  --font-color: #fefefe;
+  --timer-color: #fefefe;
+}
 
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .header .info {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .bubble-buttons {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .bubble-buttons button {
-    margin-bottom: 10px;
-    padding: 10px 30px;
-    font-size: 16px;
-  }
-
-  .recent-posts, .posts-wrapper {
-    flex: 1;
-  }
-
-  .current-project {
-    position: relative;
-    margin-top: 20px;
-    bottom: auto;
-  }
-
-  .navbar {
-    position: relative;
-    margin-top: 20px;
-    bottom: auto;
+@media screen and (max-width: 768px) {
+  .navbar button {
+    font-size: 10px;
   }
 }
