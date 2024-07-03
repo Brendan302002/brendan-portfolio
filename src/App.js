@@ -3,8 +3,11 @@ import './App.css';
 
 import profile from './components/assets/images/profile/IMG_3557.jpeg';
 import search from './components/assets/images/search2.png';
+import searchLight from './components/assets/images/searchlogo.png';
 import home from './components/assets/images/home21.png';
+import homeLight from './components/assets/images/homelogo.png';
 import library from './components/assets/images/library2.png';
+import libraryLight from './components/assets/images/library.png';
 import pin2 from './components/assets/images/pin.png';
 import linkedin from './components/assets/images/Linked-in.png';
 import github from './components/assets/images/github-img.png';
@@ -83,7 +86,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="bubble-buttons">
+      <div className={`bubble-buttons ${lightMode ? 'light-mode' : ''}`}>
         <button>About</button>
         <button>Blog</button>
         <button>Projects</button>
@@ -131,17 +134,17 @@ const App = () => {
         </div>
       </div>
 
-      <div className="navbar">
+      <div className={`navbar ${lightMode ? 'light-mode' : ''}`}>
         <button>
-          <img src={home} alt="About" />
+          <img src={lightMode ? homeLight : home} alt="About" />
           About
         </button>
         <button>
-          <img src={search} alt="Search" />
+          <img src={lightMode ? searchLight : search} alt="Search" />
           Search
         </button>
         <button>
-          <img src={library} alt="Library" />
+          <img src={lightMode ? libraryLight : library} alt="Library" />
           Library
         </button>
       </div>
