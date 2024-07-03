@@ -370,6 +370,7 @@ input:checked + .slider:before {
   bottom: 0;
   left: 0;
   right: 0;
+  height: 55px;
   display: flex;
   justify-content: space-around;
   background-color: var(--bg-color);
