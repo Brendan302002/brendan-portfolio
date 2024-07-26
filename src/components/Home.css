@@ -1,152 +1,115 @@
-/* Base styles */
-.home {
-  position: relative;
-  text-align: center;
-  color: rgb(206, 206, 206);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  padding-right: 200px;
-  font-family: 'Open Sans', sans-serif; 
-  font-weight: 100;
+  overflow: hidden; /* Disable scrolling */
 }
 
-.background {
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw; /* Ensure full viewport width */
+  text-align: center;
+  overflow: hidden; /* Prevent internal scrolling */
+}
+
+.links-bar {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 50px;
+  background-color: aqua;
 }
 
-.background-image {
-  width: auto;
-  height: auto;
-  position: right;
-  opacity: 0.2;
-}
-
-.top-right-links {
+.top-bar {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  width: 100%;
+  height: 50px;
   display: flex;
-  gap: 10px;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fff;
 }
 
-.top-right-links img {
+.social-icons {
+  display: flex;
+  /* align-items: center; */
+}
+
+.social-icon {
   width: 50px;
   height: 50px;
-  transition: transform 0.5s ease-in-out;
+  margin-left: 10px; /* Adjust spacing between icons */
 }
 
-.top-right-links img:hover {
-  animation: shake 0.7s ease-in-out;
-  animation-iteration-count: 1;
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
-@keyframes shake {
-  0%, 100% { transform: translate(0, 0); }
-  10%, 30%, 50%, 70%, 90% { transform: translate(-2px, -1px); }
-  20%, 40%, 60%, 80% { transform: translate(2px, 1px); }
+.search-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 25px;
+  padding-right: 50px;
+  background: url('./assets/images/searchlogo.png') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
 }
 
-.welcome-text {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif; 
-  font-weight: 200;
-}
-
-.profile-picture {
-  width: 50%;
-  height: 50%;
+.profile-pic {
+  height: 225px;
   border-radius: 10%;
-  border: #282c34 3px solid;
-  margin-top: 20px;
-  position: relative;
-  z-index: 2;
 }
 
-.game-screenshot1 {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -10px;
-  right: -20px;
-  opacity: 0.8;
-  z-index: 1;
+.job-title {
+  color: gray;
+  font-size: 16px;
 }
 
-.game-screenshot2 {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  bottom: -10px;
-  left: -20px;
-  opacity: 0.8;
-  z-index: 1;
+.top-bar .search-bar {
+  display: none;
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
 }
 
-.flip-wheel {
-  display: inline-block;
-  animation: flip-animation 2s infinite;
-  width: 150px;
-  text-align: left;
+.top-bar .search-bar input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
 }
 
-@keyframes flip-animation {
-  0% { transform: translateY(0); opacity: 1; }
-  45% { transform: translateY(-100%); opacity: 0; }
-  55% { transform: translateY(100%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+.top-bar .search-bar.active {
+  display: block;
 }
 
-/* Responsive styles for screens 800px or smaller */
-@media (max-width: 800px) {
-  .home {
-    flex-direction: column;
-    padding-right: 0;
-    text-align: center;
-  }
-
-  .welcome-text {
-    max-width: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  .profile-picture {
-    width: 80%;
-    height: auto;
-    margin-top: 10px;
-  }
-
-  .game-screenshot1, .game-screenshot2 {
-    width: 80px;
-    height: 80px;
-    position: static;
-    margin: 5px auto;
+@media (max-width: 767px) {
+  .top-bar .search-icon {
     display: block;
   }
 
-  .top-right-links {
-    top: 5px;
-    right: 5px;
-    flex-direction: column;
-    gap: 5px;
+  .top-bar .search-bar {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
   }
 
-  .top-right-links img {
-    width: 40px;
-    height: 40px;
+  .top-bar .search-bar.active {
+    display: block;
   }
 }
